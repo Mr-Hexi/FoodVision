@@ -1,4 +1,4 @@
-### 1. Imports and class names setup ###
+### 1. Imports and class names setup 
 import gradio as gr
 import os
 import torch
@@ -8,15 +8,15 @@ from timeit import default_timer as timer
 from typing import Tuple, Dict
 
 # Setup class names
-with open("class_names.txt", "r") as f:  # reading them in from class_names.txt
+with open("class_names.txt", "r") as f:  # reading target labels from class_names.txt
     class_names = [food_name.strip() for food_name in f.readlines()]
 
-### 2. Model and transforms preparation ###
+### 2. Model and transforms preparation 
 
 # Create model
 effnetb2, effnetb2_transforms = create_effnetb2_model(
-    num_classes=101,  # could also use len(class_names)
-)
+    num_classes=len(class_names),  
+    )
 
 # Load saved weights
 effnetb2.load_state_dict(
@@ -56,18 +56,17 @@ def predict(img) -> Tuple[Dict, float]:
     return pred_labels_and_probs, pred_time
 
 
-### 4. Gradio app ###
+### 4. Gradio app 
 
-# Create title, description and article strings
-title = "FoodVision Big 🍔👁"
-description = "An EfficientNetB2 feature extractor computer vision model to classify images of food into [101 different classes](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/food101_class_names.txt)."
-article = "Created at [09. PyTorch Model Deployment](https://www.learnpytorch.io/09_pytorch_model_deployment/)."
-
+# Create title, description and article 
+title = "FoodVision 🍕🥙"
+description = "A Simple Deep Learning Demo Application which is trained on EfficientNetB2 Fine Tuned computer vision model to classify food images of [101 different types](https://huggingface.co/spaces/Hexii/FoodVision/blob/main/class_names.txt)."
+article = "Created by [Ansari Abu Huzaifa](https://github.com/Mr-Hexi"
 # Create examples list from "examples/" directory
 example_list = [["examples/" + example] for example in os.listdir("examples")]
 
-# Create Gradio interface
-demo = gr.Interface(
+# Create Gradio interface 
+app = gr.Interface(
     fn=predict,
     inputs=gr.Image(type="pil"),
     outputs=[
@@ -80,5 +79,6 @@ demo = gr.Interface(
     article=article,
 )
 
-# Launch the app!
-demo.launch(share=True)
+
+# launch the App
+app.launch()
