@@ -61,7 +61,7 @@ def predict(img) -> Tuple[Dict, float]:
 # Create title, description and article 
 title = "FoodVision 🍕🥙"
 description = "A Simple Deep Learning Demo Application which is trained on EfficientNetB2 Fine Tuned computer vision model to classify food images of [101 different types](https://huggingface.co/spaces/Hexii/FoodVision/blob/main/class_names.txt)."
-article = "Created by [Ansari Abu Huzaifa](https://github.com/Mr-Hexi"
+article = "Created by [Ansari Abu Huzaifa](https://github.com/Mr-Hexi")
 # Create examples list from "examples/" directory
 example_list = [["examples/" + example] for example in os.listdir("examples")]
 
