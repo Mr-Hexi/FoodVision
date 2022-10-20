@@ -22,7 +22,7 @@ Then we retrained it on the [**`Food 101`**](https://www.kaggle.com/datasets/dan
 
 ## App Demo
 
-## TRY IT OUT YOURSELF: [Click here](https://huggingface.co/spaces/Hexii/FoodVision)
+# TRY IT OUT YOURSELF: [Click here](https://huggingface.co/spaces/Hexii/FoodVision)
 ![APP Demo](https://raw.githubusercontent.com/Mr-Hexi/FoodVision/main/extras/app.png)
 
 
