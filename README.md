@@ -21,10 +21,12 @@ Then we retrained it on the [**`Food 101`**](https://www.kaggle.com/datasets/dan
 
 
 ## App Demo
+
+## TRY IT OUT YOURSELF: [Click here](https://huggingface.co/spaces/Hexii/FoodVision)
 ![APP Demo](https://raw.githubusercontent.com/Mr-Hexi/FoodVision/main/extras/app.png)
 
 
-## TRY IT OUT YOURSELF: [Click here](https://huggingface.co/spaces/Hexii/FoodVision)
+
 
 ## 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
